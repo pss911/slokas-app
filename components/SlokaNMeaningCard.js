@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 const SlokaNMeaningCard = () => {
@@ -24,11 +24,10 @@ const SlokaNMeaningCard = () => {
       </View>
       <View>
         <Text style={styles.meaningText}>
-          O Lord, he whose dress is the wide white sky, who is all pervading,
-          {"\n"}
-          whose arms are spread to all four sides. One with the blissful face,
-          {"\n"}
-          We meditate on you, nullify all troubles.{"\n"}
+          యస్య ద్విరద వక్త్రాద్యః{"\n"}
+          పారిసద్య: పరవశ్శతమ్ ।{"\n"}
+          విఘ్నం విఘ్నన్తి సతతం{"\n"}
+          విష్వక్సేనం తమాశ్రయే।।
         </Text>
       </View>
     </View>
@@ -37,7 +36,7 @@ const SlokaNMeaningCard = () => {
 
 const styles = StyleSheet.create({
   slokaText: {
-    fontWeight: "bold",
+    lineHeight: 50,
     fontSize: 35,
     fontFamily: "Telugu2",
     padding: 15,
@@ -56,31 +55,31 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     position: "absolute",
-    top: -15,
+    top: -25,
   },
   option: {
+    borderRadius: 10,
     marginHorizontal: 5,
     height: 45,
     width: 75,
     backgroundColor: "#C31A1A",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 10,
+    lineHeight: 45,
+    textAlign: "center",
     fontFamily: "Poppins",
     fontSize: 16,
     color: "#fff",
   },
   meaningText: {
+    lineHeight: 50,
     fontSize: 35,
-    fontFamily: "Poppins",
+    fontFamily: "Telugu2",
     padding: 15,
     borderRadius: 10,
     textAlign: "center",
     backgroundColor: "#FCCE89",
     color: "#C31A1A",
-    marginTop: 35,
-    marginBottom: 20,
+    marginTop: 30,
+    marginBottom: 10,
   },
 });
 
