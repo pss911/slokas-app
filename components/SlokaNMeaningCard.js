@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     position: "absolute",
-    top: -25,
+    top: -15,
   },
   option: {
     borderRadius: 10,
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     backgroundColor: "#FCCE89",
     color: "#C31A1A",
-    marginTop: 30,
+    marginTop: 35,
     marginBottom: 10,
   },
 });

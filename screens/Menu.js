@@ -1,14 +1,18 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Button } from "react-native";
 
 import Footer from "../components/Footer";
 import SlokaCards from "../containers/SlokaCards";
 
-const Menu = () => {
+const Menu = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }}>
       <SlokaCards />
       <Footer />
+      <Button
+        title="go to Sub Sloka Cards"
+        onPress={() => navigation.navigate("SubMenu")}
+      />
     </View>
   );
 };
