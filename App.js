@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, View, SafeAreaView } from "react-native";
 import { loadAsync } from "expo-font";
 import AppLoading from "expo-app-loading";
-
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import SlokaCard from "./components/SlokaCard";
+import Navigator from "./routes/menuStack";
 
 const getFonts = () =>
   loadAsync({
@@ -15,12 +12,7 @@ const getFonts = () =>
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
   if (fontsLoaded) {
-    return (
-      <SafeAreaView>
-        {/* <SlokaCard /> */}
-        <Footer />
-      </SafeAreaView>
-    );
+    return <Navigator />;
   } else {
     return (
       <AppLoading
@@ -31,5 +23,3 @@ export default function App() {
     );
   }
 }
-
-const styles = StyleSheet.create({});

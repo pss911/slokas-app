@@ -3,27 +3,24 @@ import { View, Text, StyleSheet } from "react-native";
 
 const Header = () => {
   return (
-    <View style={styles.headerContainer}>
+    <View style={styles.header}>
       <Text style={styles.headerText}>Slokas App</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  headerContainer: {
-    width: "100%",
-    backgroundColor: "#FCCE89",
-    height: 76,
-    display: "flex",
-    justifyContent: "center",
+  header: {
+    flexDirection: "row",
     alignItems: "center",
-    position: "absolute",
-    top: 0,
+    justifyContent: "center",
   },
   headerText: {
-    fontSize: 48,
-    fontFamily: "Poppins",
+    fontWeight: "bold",
+    fontSize: 40,
     color: "#C31A1A",
+    letterSpacing: 1,
+    fontFamily: "Poppins",
   },
 });
 
