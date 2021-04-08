@@ -7,6 +7,8 @@ import Navigator from "./routes/menuStack";
 const getFonts = () =>
   loadAsync({
     Poppins: require("./assets/fonts/Poppins-Regular.ttf"),
+    Telugu1: require("./assets/fonts/NTR-Regular.ttf"),
+    Telugu2: require("./assets/fonts/Mallanna-Regular.ttf"),
   });
 
 export default function App() {

@@ -2,15 +2,15 @@ import React from "react";
 import { View } from "react-native";
 
 import Footer from "../components/Footer";
-import SlokaCards from "../containers/SlokaCards";
+import SubSlokaCards from "../containers/SubSlokaCards";
 
-const Menu = () => {
+const SubMenu = () => {
   return (
     <View style={{ flex: 1 }}>
-      <SlokaCards />
+      <SubSlokaCards />
       <Footer />
     </View>
   );
 };
 
-export default Menu;
+export default SubMenu;
