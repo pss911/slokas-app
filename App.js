@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, View, SafeAreaView } from "react-native";
 import { loadAsync } from "expo-font";
 import AppLoading from "expo-app-loading";
-import Navigator from "./routes/menuStack";
+import Navigator from "./routes/NavigationStack";
 
 const getFonts = () =>
   loadAsync({

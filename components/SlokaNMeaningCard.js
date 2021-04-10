@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 const SlokaNMeaningCard = () => {
   return (
     <View>
-      <View>
+      <View style={styles.slokaCard}>
         <Text style={styles.slokaText}>
           శుక్లాంబరధరం విష్ణుం{"\n"}
           శశివర్ణం చతుర్బుజమ్ ।{"\n"}
@@ -14,15 +14,15 @@ const SlokaNMeaningCard = () => {
       </View>
       <View style={styles.optionsContainer}>
         <View style={styles.options}>
-          <View>
-            <Text style={styles.option}>Left</Text>
+          <View style={styles.option}>
+            <Text style={styles.optionText}>Left</Text>
           </View>
-          <View>
-            <Text style={styles.option}>Right</Text>
+          <View style={styles.option}>
+            <Text style={styles.optionText}>Right</Text>
           </View>
         </View>
       </View>
-      <View>
+      <View style={styles.meaningCard}>
         <Text style={styles.meaningText}>
           యస్య ద్విరద వక్త్రాద్యః{"\n"}
           పారిసద్య: పరవశ్శతమ్ ।{"\n"}
@@ -35,14 +35,16 @@ const SlokaNMeaningCard = () => {
 };
 
 const styles = StyleSheet.create({
+  slokaCard: {
+    borderRadius: 10,
+    backgroundColor: "#FCCE89",
+    paddingTop: 30,
+  },
   slokaText: {
     lineHeight: 50,
     fontSize: 35,
     fontFamily: "Telugu2",
-    padding: 15,
-    borderRadius: 10,
     textAlign: "center",
-    backgroundColor: "#FCCE89",
     color: "#C31A1A",
   },
   optionsContainer: {
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     position: "absolute",
-    top: -15,
+    top: -25,
   },
   option: {
     borderRadius: 10,
@@ -63,23 +65,27 @@ const styles = StyleSheet.create({
     height: 45,
     width: 75,
     backgroundColor: "#C31A1A",
+  },
+  optionText: {
     lineHeight: 45,
     textAlign: "center",
     fontFamily: "Poppins",
     fontSize: 16,
     color: "#fff",
   },
+  meaningCard: {
+    marginTop: 35,
+    marginBottom: 10,
+    backgroundColor: "#FCCE89",
+    padding: 15,
+    borderRadius: 10,
+  },
   meaningText: {
     lineHeight: 50,
     fontSize: 35,
     fontFamily: "Telugu2",
-    padding: 15,
-    borderRadius: 10,
     textAlign: "center",
-    backgroundColor: "#FCCE89",
     color: "#C31A1A",
-    marginTop: 35,
-    marginBottom: 10,
   },
 });
 

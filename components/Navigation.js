@@ -1,14 +1,15 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { AntDesign } from "@expo/vector-icons";
 
 const Navigation = () => {
   return (
     <View style={styles.navConatiner}>
       <View style={styles.buttons}>
-        <Text style={styles.text}>&#60;</Text>
+        <AntDesign name="arrowleft" size={28} color="white" />
       </View>
       <View style={styles.buttons}>
-        <Text style={styles.text}>&#62;</Text>
+        <AntDesign name="arrowright" size={28} color="white" />
       </View>
     </View>
   );
@@ -35,10 +36,6 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-  },
-  text: {
-    fontSize: 36,
-    color: "#fff",
   },
 });
 
