@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, View, SafeAreaView } from "react-native";
+import { SafeAreaView } from "react-native";
 import { loadAsync } from "expo-font";
 import AppLoading from "expo-app-loading";
 import Navigator from "./routes/NavigationStack";
@@ -13,15 +13,15 @@ const getFonts = () =>
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
-  if (fontsLoaded) {
-    return <Navigator />;
-  } else {
-    return (
-      <AppLoading
-        startAsync={getFonts}
-        onFinish={() => setFontsLoaded(true)}
-        onError={() => setFontsLoaded(false)}
-      />
-    );
-  }
+  return fontsLoaded ? (
+    <SafeAreaView>
+      <Navigator />
+    </SafeAreaView>
+  ) : (
+    <AppLoading
+      startAsync={getFonts}
+      onFinish={() => setFontsLoaded(true)}
+      onError={() => setFontsLoaded(false)}
+    />
+  );
 }
