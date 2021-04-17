@@ -18,8 +18,6 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     marginVertical: 10,
-    borderRadius: 10,
-    display: "flex",
     flexDirection: "row",
     alignItems: "center",
   },
