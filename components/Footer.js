@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { Dimensions } from "react-native";
-const windowHeight = Dimensions.get("window").height;
+import { View, Text, StyleSheet, Linking } from "react-native";
+import { AntDesign } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 
 const Footer = () => {
   return (
@@ -10,10 +10,38 @@ const Footer = () => {
         <View style={styles.innerContainer}>
           <View style={styles.imageContainer}></View>
           <View style={styles.socialMediaContainer}>
-            <View style={styles.socialMedia}></View>
-            <View style={styles.socialMedia}></View>
-            <View style={styles.socialMedia}></View>
-            <View style={styles.socialMedia}></View>
+            <View style={styles.socialMedia}>
+              <AntDesign
+                name="twitter"
+                onPress={() => Linking.openURL("http://twitter.com")}
+                size={22}
+                color="white"
+              />
+            </View>
+            <View style={styles.socialMedia}>
+              <AntDesign
+                name="facebook-square"
+                onPress={() => Linking.openURL("http://facebook.com")}
+                size={22}
+                color="white"
+              />
+            </View>
+            <View style={styles.socialMedia}>
+              <AntDesign
+                name="youtube"
+                onPress={() => Linking.openURL("http://youtube.com")}
+                size={22}
+                color="white"
+              />
+            </View>
+            <View style={styles.socialMedia}>
+              <FontAwesome5
+                name="patreon"
+                onPress={() => Linking.openURL("http://patreon.com")}
+                size={22}
+                color="white"
+              />
+            </View>
           </View>
         </View>
         <View>
@@ -43,6 +71,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#890707",
     borderRadius: 10,
     marginLeft: 5,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   socialMediaContainer: {
     display: "flex",

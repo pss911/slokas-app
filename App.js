@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { SafeAreaView } from "react-native";
 import { loadAsync } from "expo-font";
 import AppLoading from "expo-app-loading";
 import Navigator from "./routes/NavigationStack";
@@ -14,9 +13,7 @@ const getFonts = () =>
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
   return fontsLoaded ? (
-    <SafeAreaView>
-      <Navigator />
-    </SafeAreaView>
+    <Navigator />
   ) : (
     <AppLoading
       startAsync={getFonts}
