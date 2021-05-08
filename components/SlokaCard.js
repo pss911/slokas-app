@@ -1,10 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 const SlokaCard = () => {
   return (
     <View style={styles.cardContainer}>
-      <View style={styles.imageContainer}></View>
+      <View style={styles.imageContainer}>
+        <Image
+          source={require("../9864913._UY415_SS415_.jpg")}
+          style={styles.image}
+        />
+      </View>
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>Stotram</Text>
         <Text style={styles.description}>Om Namah Sivaya</Text>
@@ -14,6 +19,10 @@ const SlokaCard = () => {
 };
 
 const styles = StyleSheet.create({
+  image: {
+    height: "100%",
+    width: "100%",
+  },
   cardContainer: {
     width: "100%",
     marginVertical: 10,
