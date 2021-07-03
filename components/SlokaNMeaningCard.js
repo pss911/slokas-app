@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   slokaText: {
     lineHeight: 50,
     fontSize: 35,
-    fontFamily: "Telugu2",
+    fontFamily: "Telugu1",
     textAlign: "center",
     color: "#C31A1A",
     paddingHorizontal: 15,
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
   meaningText: {
     lineHeight: 50,
     fontSize: 35,
-    fontFamily: "Telugu2",
+    fontFamily: "Telugu1",
     textAlign: "center",
     color: "#C31A1A",
   },

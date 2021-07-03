@@ -8,7 +8,7 @@ const Footer = () => {
     <View>
       <View style={styles.footer}>
         <View style={styles.innerContainer}>
-          <View style={styles.imageContainer}></View>
+          <View style={styles.imageContainer}>{null}</View>
           <View style={styles.socialMediaContainer}>
             <View style={styles.socialMedia}>
               <AntDesign
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 16,
     color: "#890707",
-    fontFamily: "Poppins",
+    fontFamily: "Telugu1",
   },
 });
 

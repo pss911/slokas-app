@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   subSlokaConatiner: {
     width: "100%",
     borderRadius: 10,
-    height: 60,
+    height: 75,
     backgroundColor: "#FCCE89",
     display: "flex",
     justifyContent: "center",

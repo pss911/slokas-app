@@ -18,7 +18,7 @@ const screens = {
       headerTitleStyle: {
         fontWeight: "900",
         letterSpacing: 1,
-        fontFamily: "Poppins",
+        fontFamily: "Telugu1",
         fontSize: 30,
       },
     },
@@ -34,7 +34,7 @@ const screens = {
       headerTitleStyle: {
         fontWeight: "900",
         letterSpacing: 1,
-        fontFamily: "Poppins",
+        fontFamily: "Telugu1",
         fontSize: 30,
       },
     },
@@ -50,7 +50,7 @@ const screens = {
       headerTitleStyle: {
         fontWeight: "900",
         letterSpacing: 1,
-        fontFamily: "Poppins",
+        fontFamily: "Telugu1",
         fontSize: 30,
       },
     },
