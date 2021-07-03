@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const SubSlokaCard = () => {
+const SubSlokaCard = ({ name }) => {
   return (
     <View style={styles.subSlokaConatiner}>
-      <Text style={styles.slokaNameText}>Some Sloka</Text>
+      <Text style={styles.slokaNameText}>{name}</Text>
     </View>
   );
 };
@@ -20,11 +20,12 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     flexDirection: "row",
     alignItems: "center",
+    paddingVertical: 20
   },
   slokaNameText: {
     fontSize: 36,
     color: "#890707",
-    fontFamily: "Poppins",
+    fontFamily: "Telugu1",
   },
 });
 

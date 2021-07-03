@@ -1,18 +1,18 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
-const SlokaCard = () => {
+const SlokaCard = ({image, title, description}) => {
   return (
     <View style={styles.cardContainer}>
       <View style={styles.imageContainer}>
         <Image
-          source={require("../9864913._UY415_SS415_.jpg")}
+          source={image}
           style={styles.image}
         />
       </View>
       <View style={styles.detailsContainer}>
-        <Text style={styles.title}>Stotram</Text>
-        <Text style={styles.description}>Om Namah Sivaya</Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.description}>{description}</Text>
       </View>
     </View>
   );

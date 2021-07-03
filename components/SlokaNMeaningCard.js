@@ -1,33 +1,28 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import {View, Text, StyleSheet, TouchableOpacity} from "react-native";
 
-const SlokaNMeaningCard = () => {
+const SlokaNMeaningCard = ({sloka, wordToWordMeaning, meaning, meaningType, setMeaningType }) => {
   return (
     <View>
       <View style={styles.slokaCard}>
         <Text style={styles.slokaText}>
-          శుక్లాంబరధరం విష్ణుం{"\n"}
-          శశివర్ణం చతుర్బుజమ్ ।{"\n"}
-          ప్రసన్న వనం ద్యాయేత్ సర్వ{"\n"}
-          విఘ్నోపశాంతయే ।।{"\n"}
+          {sloka}
         </Text>
       </View>
       <View style={styles.optionsContainer}>
         <View style={styles.options}>
           <View style={styles.option}>
-            <Text style={styles.optionText}>Left</Text>
+            <TouchableOpacity activeOpacity={0.7} onPress={() => setMeaningType(true)}><Text style={styles.optionText}>తాత్పర్యము</Text></TouchableOpacity>
           </View>
           <View style={styles.option}>
-            <Text style={styles.optionText}>Right</Text>
+            <TouchableOpacity activeOpacity={0.7} onPress={() => setMeaningType(false)}><Text style={styles.optionText}>ప్రతి పదార్ధము</Text></TouchableOpacity>
           </View>
         </View>
       </View>
       <View style={styles.meaningCard}>
         <Text style={styles.meaningText}>
-          యస్య ద్విరద వక్త్రాద్యః{"\n"}
-          పారిసద్య: పరవశ్శతమ్ ।{"\n"}
-          విఘ్నం విఘ్నన్తి సతతం{"\n"}
-          విష్వక్సేనం తమాశ్రయే।।
+          {meaningType === true ? meaning : null}
+          {meaningType === false ? wordToWordMeaning : null}
         </Text>
       </View>
     </View>
@@ -46,6 +41,8 @@ const styles = StyleSheet.create({
     fontFamily: "Telugu2",
     textAlign: "center",
     color: "#C31A1A",
+    paddingHorizontal: 15,
+    paddingBottom: 35
   },
   optionsContainer: {
     display: "flex",
@@ -63,14 +60,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginHorizontal: 5,
     height: 45,
-    width: 75,
     backgroundColor: "#C31A1A",
+    width: 100
   },
   optionText: {
     lineHeight: 45,
     textAlign: "center",
-    fontFamily: "Poppins",
-    fontSize: 16,
+    fontFamily: "Telugu1",
+    fontSize: 18,
     color: "#fff",
   },
   meaningCard: {

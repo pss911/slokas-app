@@ -1,16 +1,20 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import {View, StyleSheet, TouchableOpacity} from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
 const Navigation = () => {
   return (
     <View style={styles.navConatiner}>
-      <View style={styles.buttons}>
-        <AntDesign name="arrowleft" size={28} color="white" />
-      </View>
-      <View style={styles.buttons}>
-        <AntDesign name="arrowright" size={28} color="white" />
-      </View>
+      <TouchableOpacity activeOpacity={0.7}>
+        <View style={styles.buttons}>
+          <AntDesign name="arrowleft" size={28} color="white" />
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity activeOpacity={0.7}>
+        <View style={styles.buttons}>
+          <AntDesign name="arrowright" size={28} color="white" />
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };

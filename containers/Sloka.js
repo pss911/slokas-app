@@ -1,13 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import { StyleSheet, ScrollView } from "react-native";
 import Navigation from "../components/Navigation";
 import SlokaNMeaningCard from "../components/SlokaNMeaningCard";
 
 const SlokaCards = () => {
+  const [meaningType, setMeaningType] = useState();
   return (
     <ScrollView style={styles.container}>
       <Navigation />
-      <SlokaNMeaningCard />
+      <SlokaNMeaningCard meaningType={meaningType} setMeaningType={setMeaningType} />
     </ScrollView>
   );
 };
