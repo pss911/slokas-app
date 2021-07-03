@@ -2,19 +2,10 @@ import React from "react";
 import { StyleSheet, ScrollView } from "react-native";
 import SubSlokaCard from "../components/SubSlokaCard";
 
-const SubSlokaCards = () => {
+const SubSlokaCards = ({id}) => {
   return (
     <ScrollView style={styles.container}>
-      <SubSlokaCard />
-      <SubSlokaCard />
-      <SubSlokaCard />
-      <SubSlokaCard />
-      <SubSlokaCard />
-      <SubSlokaCard />
-      <SubSlokaCard />
-      <SubSlokaCard />
-      <SubSlokaCard />
-      <SubSlokaCard />
+      <SubSlokaCard name={id} />
     </ScrollView>
   );
 };

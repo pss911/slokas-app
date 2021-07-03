@@ -7,7 +7,7 @@ import SlokaCards from "../containers/SlokaCards";
 const Menu = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }}>
-      <SlokaCards />
+      <SlokaCards navigation={navigation} />
       <Footer />
       <Button
         title="go to Sub Sloka Cards"

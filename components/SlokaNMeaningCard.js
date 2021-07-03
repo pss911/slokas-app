@@ -1,21 +1,35 @@
 import React from "react";
-import {View, Text, StyleSheet, TouchableOpacity} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-const SlokaNMeaningCard = ({sloka, wordToWordMeaning, meaning, meaningType, setMeaningType }) => {
+const SlokaNMeaningCard = ({
+  sloka,
+  wordToWordMeaning,
+  meaning,
+  meaningType,
+  setMeaningType,
+}) => {
   return (
     <View>
       <View style={styles.slokaCard}>
-        <Text style={styles.slokaText}>
-          {sloka}
-        </Text>
+        <Text style={styles.slokaText}>{sloka}</Text>
       </View>
       <View style={styles.optionsContainer}>
         <View style={styles.options}>
           <View style={styles.option}>
-            <TouchableOpacity activeOpacity={0.7} onPress={() => setMeaningType(true)}><Text style={styles.optionText}>తాత్పర్యము</Text></TouchableOpacity>
+            <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={() => setMeaningType(true)}
+            >
+              <Text style={styles.optionText}>తాత్పర్యము</Text>
+            </TouchableOpacity>
           </View>
           <View style={styles.option}>
-            <TouchableOpacity activeOpacity={0.7} onPress={() => setMeaningType(false)}><Text style={styles.optionText}>ప్రతి పదార్ధము</Text></TouchableOpacity>
+            <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={() => setMeaningType(false)}
+            >
+              <Text style={styles.optionText}>ప్రతి పదార్ధము</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -42,7 +56,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#C31A1A",
     paddingHorizontal: 15,
-    paddingBottom: 35
+    paddingBottom: 35,
   },
   optionsContainer: {
     display: "flex",
@@ -61,7 +75,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     height: 45,
     backgroundColor: "#C31A1A",
-    width: 100
+    width: 100,
   },
   optionText: {
     lineHeight: 45,

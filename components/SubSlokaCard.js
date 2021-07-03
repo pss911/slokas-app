@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     flexDirection: "row",
     alignItems: "center",
-    paddingVertical: 20
+    paddingVertical: 20,
   },
   slokaNameText: {
     fontSize: 36,

@@ -1,18 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
-const SlokaCard = ({image, title, description}) => {
+const SlokaCard = ({ image, title }) => {
   return (
     <View style={styles.cardContainer}>
       <View style={styles.imageContainer}>
-        <Image
-          source={image}
-          style={styles.image}
-        />
+        <Image source={image} style={styles.image} />
       </View>
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.description}>{description}</Text>
       </View>
     </View>
   );
@@ -43,9 +39,10 @@ const styles = StyleSheet.create({
   detailsContainer: {
     height: "100%",
     marginVertical: 10,
+    display: "flex",
+    justifyContent: "center",
   },
-  title: { fontFamily: "Poppins", fontSize: 36, color: "#890707" },
-  description: { fontFamily: "Poppins", fontSize: 24, color: "#890707" },
+  title: { fontFamily: "Title", fontSize: 46, color: "#890707" },
 });
 
 export default SlokaCard;

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { StyleSheet, ScrollView } from "react-native";
 import Navigation from "../components/Navigation";
 import SlokaNMeaningCard from "../components/SlokaNMeaningCard";
@@ -8,7 +8,10 @@ const SlokaCards = () => {
   return (
     <ScrollView style={styles.container}>
       <Navigation />
-      <SlokaNMeaningCard meaningType={meaningType} setMeaningType={setMeaningType} />
+      <SlokaNMeaningCard
+        meaningType={meaningType}
+        setMeaningType={setMeaningType}
+      />
     </ScrollView>
   );
 };
