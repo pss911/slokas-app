@@ -1,12 +1,12 @@
 export default [
   {
-    id: "001",
-    name: "రామాయణము",
-    image: require("../images/ramayanam.jpg"),
+    id: "b001",
+    name: "ఒకటవ పుస్తకము",
+    image: require("../images/book1.png"),
   },
   {
-    id: "002",
-    name: "భాగవతము",
-    image: require("../images/bhagavatham.jpg"),
+    id: "b002",
+    name: "రెండొవ పుస్తకము",
+    image: require("../images/book2.png"),
   },
 ];

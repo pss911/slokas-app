@@ -1,11 +1,38 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React, { useEffect, useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 
-const SubSlokaCard = ({ name }) => {
+const SubSlokaCard = ({ id }) => {
+  const [data, setData] = useState();
+  useEffect(() => {
+    import(`../assets/data/divisions/${id}`).then((p) => setData(p.default));
+  }, []);
+
   return (
-    <View style={styles.subSlokaConatiner}>
-      <Text style={styles.slokaNameText}>{name}</Text>
-    </View>
+    <>
+      {data ? (
+        <FlatList
+          data={data}
+          renderItem={(division) => renderItem(division)}
+          keyExtractor={(division) => division.id}
+        />
+      ) : null}
+    </>
+  );
+};
+
+const renderItem = (division) => {
+  return (
+    <TouchableOpacity activeOpacity={0.7} onPress={null}>
+      <View style={styles.subSlokaConatiner}>
+        <Text style={styles.slokaNameText}>{division.item.name}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
@@ -13,7 +40,7 @@ const styles = StyleSheet.create({
   subSlokaConatiner: {
     width: "100%",
     borderRadius: 10,
-    height: 50,
+    height: 60,
     backgroundColor: "#FCCE89",
     display: "flex",
     justifyContent: "center",

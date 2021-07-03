@@ -1,9 +1,14 @@
 import React from "react";
-import {StyleSheet, ScrollView, FlatList, TouchableOpacity} from "react-native";
+import {
+  StyleSheet,
+  ScrollView,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import SlokaCard from "../components/SlokaCard";
 import books from "../assets/data/books";
 
-const SlokaCards = ({navigation}) => {
+const SlokaCards = ({ navigation }) => {
   return (
     <ScrollView style={styles.container}>
       <FlatList
@@ -16,16 +21,19 @@ const SlokaCards = ({navigation}) => {
 };
 
 const renderItem = (books, navigation) => {
-    return (
-        <TouchableOpacity activeOpacity={0.7} onPress={() => navigation.navigate("SubMenu", {"id": books.item.id})}>
-            <SlokaCard
-                title={books.item.name}
-                description={books.item.description}
-                image={books.item.image}
-            />
-        </TouchableOpacity>
-    )
-}
+  return (
+    <TouchableOpacity
+      activeOpacity={0.7}
+      onPress={() => navigation.navigate("SubMenu", { id: books.item.id })}
+    >
+      <SlokaCard
+        title={books.item.name}
+        description={books.item.description}
+        image={books.item.image}
+      />
+    </TouchableOpacity>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
