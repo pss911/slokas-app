@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: "#fff",
   },
-  activeOption: { color: "#fff", textDecorationLine: 'underline' },
+  activeOption: { color: "#fff", textDecorationLine: "underline" },
   meaningCard: {
     marginTop: 35,
     marginBottom: 10,

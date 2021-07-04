@@ -14,7 +14,7 @@ const screens = {
       headerBackTitle: "Back",
       headerStyle: {
         backgroundColor: "#FCCE89",
-        height: 115
+        height: 115,
       },
       headerTintColor: "#C31A1A",
       headerTitleStyle: {
@@ -32,7 +32,7 @@ const screens = {
       headerBackTitle: "Back",
       headerStyle: {
         backgroundColor: "#FCCE89",
-        height: 115
+        height: 115,
       },
       headerTintColor: "#C31A1A",
       headerTitleStyle: {
@@ -50,7 +50,7 @@ const screens = {
       headerBackTitle: "Back",
       headerStyle: {
         backgroundColor: "#FCCE89",
-        height: 115
+        height: 115,
       },
       headerTintColor: "#C31A1A",
       headerTitleStyle: {

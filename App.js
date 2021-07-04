@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { loadAsync } from "expo-font";
 import AppLoading from "expo-app-loading";
 import Navigator from "./routes/NavigationStack";

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {StyleSheet, ScrollView, View} from "react-native";
+import { StyleSheet, ScrollView, View } from "react-native";
 import Navigation from "../components/Navigation";
 import SlokaNMeaningCard from "../components/SlokaNMeaningCard";
 
@@ -34,11 +34,11 @@ const SlokaCards = ({ id }) => {
           />
           <ScrollView>
             <SlokaNMeaningCard
-                sloka={data[index].sloka}
-                meaningType={meaningType}
-                setMeaningType={setMeaningType}
-                wordToWordMeaning={data[index].wordByWordMeaning}
-                meaning={data[index].meaning}
+              sloka={data[index].sloka}
+              meaningType={meaningType}
+              setMeaningType={setMeaningType}
+              wordToWordMeaning={data[index].wordByWordMeaning}
+              meaning={data[index].meaning}
             />
           </ScrollView>
         </View>
