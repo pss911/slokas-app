@@ -7,18 +7,17 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-const SubSlokaCard = ({ id }) => {
+const SubSlokaCard = ({ id, navigation }) => {
   const [data, setData] = useState();
   useEffect(() => {
-    import(`../assets/data/divisions/${id}`).then((p) => setData(p.default));
+    import("../assets/data/divisions/").then((res) => setData(res.default[id]));
   }, []);
-
   return (
     <>
       {data ? (
         <FlatList
           data={data}
-          renderItem={(division) => renderItem(division)}
+          renderItem={(division) => renderItem(division, navigation)}
           keyExtractor={(division) => division.id}
         />
       ) : null}
@@ -26,9 +25,12 @@ const SubSlokaCard = ({ id }) => {
   );
 };
 
-const renderItem = (division) => {
+const renderItem = (division, navigation) => {
   return (
-    <TouchableOpacity activeOpacity={0.7} onPress={null}>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      onPress={() => navigation.navigate("Sloka", { id: division.item.id })}
+    >
       <View style={styles.subSlokaConatiner}>
         <Text style={styles.slokaNameText}>{division.item.name}</Text>
       </View>
@@ -40,12 +42,10 @@ const styles = StyleSheet.create({
   subSlokaConatiner: {
     width: "100%",
     borderRadius: 10,
-    height: 75,
     backgroundColor: "#FCCE89",
-    display: "flex",
+    flex: 1,
     justifyContent: "center",
-    marginVertical: 10,
-    flexDirection: "row",
+    marginTop: 10,
     alignItems: "center",
     paddingVertical: 20,
   },

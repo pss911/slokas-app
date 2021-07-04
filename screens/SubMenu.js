@@ -7,7 +7,7 @@ import SubSlokaCards from "../containers/SubSlokaCards";
 const SubMenu = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }}>
-      <SubSlokaCards id={navigation.getParam("id")} />
+      <SubSlokaCards id={navigation.getParam("id")} navigation={navigation} />
       <Footer />
       <Button
         title="go to Sub Sloka Cards"

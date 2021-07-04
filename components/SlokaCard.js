@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
   },
-  title: { fontFamily: "Telugu1", fontSize: 46, color: "#890707" },
+  title: { fontFamily: "Telugu1", fontSize: 36, color: "#890707" },
 });
 
 export default SlokaCard;

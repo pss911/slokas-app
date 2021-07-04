@@ -3,10 +3,10 @@ import { View } from "react-native";
 import Footer from "../components/Footer";
 import SlokaContainer from "../containers/Sloka";
 
-const Sloka = () => {
+const Sloka = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }}>
-      <SlokaContainer />
+      <SlokaContainer id={navigation.getParam("id")} />
       <Footer />
     </View>
   );
