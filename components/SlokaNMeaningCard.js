@@ -97,14 +97,13 @@ const styles = StyleSheet.create({
     width: 130,
   },
   optionText: {
-    paddingBottom: 10,
     lineHeight: 45,
     textAlign: "center",
     fontFamily: "Telugu1",
     fontSize: 24,
     color: "#fff",
   },
-  activeOption: { color: "#fff", textDecorationLine: "underline" },
+  activeOption: { color: "#fff200", textDecorationLine: "underline" },
   meaningCard: {
     marginTop: 35,
     marginBottom: 10,
