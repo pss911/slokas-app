@@ -10,48 +10,54 @@ const screens = {
   Menu: {
     screen: Menu,
     navigationOptions: {
-      title: "Slokas App",
+      title: "శ్లోకములు",
+      headerBackTitle: "Back",
       headerStyle: {
         backgroundColor: "#FCCE89",
+        height: 115
       },
       headerTintColor: "#C31A1A",
       headerTitleStyle: {
         fontWeight: "900",
         letterSpacing: 1,
         fontFamily: "Telugu1",
-        fontSize: 30,
+        fontSize: 36,
       },
     },
   },
   SubMenu: {
     screen: SubMenu,
     navigationOptions: {
-      title: "Slokas App",
+      title: "శ్లోకములు",
+      headerBackTitle: "Back",
       headerStyle: {
         backgroundColor: "#FCCE89",
+        height: 115
       },
       headerTintColor: "#C31A1A",
       headerTitleStyle: {
         fontWeight: "900",
         letterSpacing: 1,
         fontFamily: "Telugu1",
-        fontSize: 30,
+        fontSize: 36,
       },
     },
   },
   Sloka: {
     screen: Sloka,
     navigationOptions: {
-      title: "Slokas App",
+      title: "శ్లోకములు",
+      headerBackTitle: "Back",
       headerStyle: {
         backgroundColor: "#FCCE89",
+        height: 115
       },
       headerTintColor: "#C31A1A",
       headerTitleStyle: {
         fontWeight: "900",
         letterSpacing: 1,
         fontFamily: "Telugu1",
-        fontSize: 30,
+        fontSize: 36,
       },
     },
   },

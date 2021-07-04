@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, ScrollView } from "react-native";
+import {StyleSheet, ScrollView, View} from "react-native";
 import Navigation from "../components/Navigation";
 import SlokaNMeaningCard from "../components/SlokaNMeaningCard";
 
@@ -13,7 +13,7 @@ const SlokaCards = ({ id }) => {
   return (
     <>
       {data ? (
-        <ScrollView style={styles.container}>
+        <View style={styles.container}>
           <Navigation
             leftClick={() => {
               if (index > 0) {
@@ -32,14 +32,16 @@ const SlokaCards = ({ id }) => {
               }
             }}
           />
-          <SlokaNMeaningCard
-            sloka={data[index].sloka}
-            meaningType={meaningType}
-            setMeaningType={setMeaningType}
-            wordToWordMeaning={data[index].wordByWordMeaning}
-            meaning={data[index].meaning}
-          />
-        </ScrollView>
+          <ScrollView>
+            <SlokaNMeaningCard
+                sloka={data[index].sloka}
+                meaningType={meaningType}
+                setMeaningType={setMeaningType}
+                wordToWordMeaning={data[index].wordByWordMeaning}
+                meaning={data[index].meaning}
+            />
+          </ScrollView>
+        </View>
       ) : (
         <ScrollView></ScrollView>
       )}

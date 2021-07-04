@@ -23,7 +23,7 @@ const SlokaNMeaningCard = ({
               <Text
                 style={
                   meaningType == true
-                    ? [styles.optionText, { color: "#fff" }]
+                    ? [styles.optionText, styles.activeOption]
                     : styles.optionText
                 }
               >
@@ -39,7 +39,7 @@ const SlokaNMeaningCard = ({
               <Text
                 style={
                   meaningType == false
-                    ? [styles.optionText, { color: "#fff" }]
+                    ? [styles.optionText, styles.activeOption]
                     : styles.optionText
                 }
               >
@@ -102,8 +102,9 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontFamily: "Telugu1",
     fontSize: 24,
-    color: "#000",
+    color: "#fff",
   },
+  activeOption: { color: "#fff", textDecorationLine: 'underline' },
   meaningCard: {
     marginTop: 35,
     marginBottom: 10,
