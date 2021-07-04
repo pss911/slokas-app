@@ -2,15 +2,15 @@ import React from "react";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
-const Navigation = () => {
+const Navigation = ({ leftClick, rightClick }) => {
   return (
     <View style={styles.navConatiner}>
-      <TouchableOpacity activeOpacity={0.7}>
+      <TouchableOpacity activeOpacity={0.7} onPress={leftClick}>
         <View style={styles.buttons}>
           <AntDesign name="arrowleft" size={28} color="white" />
         </View>
       </TouchableOpacity>
-      <TouchableOpacity activeOpacity={0.7}>
+      <TouchableOpacity activeOpacity={0.7} onPress={rightClick}>
         <View style={styles.buttons}>
           <AntDesign name="arrowright" size={28} color="white" />
         </View>

@@ -20,7 +20,15 @@ const SlokaNMeaningCard = ({
               activeOpacity={0.7}
               onPress={() => setMeaningType(true)}
             >
-              <Text style={styles.optionText}>తాత్పర్యము</Text>
+              <Text
+                style={
+                  meaningType == true
+                    ? [styles.optionText, { color: "#fff" }]
+                    : styles.optionText
+                }
+              >
+                తాత్పర్యము
+              </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.option}>
@@ -28,17 +36,27 @@ const SlokaNMeaningCard = ({
               activeOpacity={0.7}
               onPress={() => setMeaningType(false)}
             >
-              <Text style={styles.optionText}>ప్రతి పదార్ధము</Text>
+              <Text
+                style={
+                  meaningType == false
+                    ? [styles.optionText, { color: "#fff" }]
+                    : styles.optionText
+                }
+              >
+                ప్రతి పదార్ధము
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
       </View>
-      <View style={styles.meaningCard}>
-        <Text style={styles.meaningText}>
-          {meaningType === true ? meaning : null}
-          {meaningType === false ? wordToWordMeaning : null}
-        </Text>
-      </View>
+      {
+        <View style={styles.meaningCard}>
+          <Text style={styles.meaningText}>
+            {meaningType === true ? meaning : null}
+            {meaningType === false ? wordToWordMeaning : null}
+          </Text>
+        </View>
+      }
     </View>
   );
 };
@@ -50,6 +68,7 @@ const styles = StyleSheet.create({
     paddingTop: 30,
   },
   slokaText: {
+    paddingTop: 5,
     lineHeight: 50,
     fontSize: 35,
     fontFamily: "Telugu1",
@@ -75,14 +94,15 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     height: 45,
     backgroundColor: "#C31A1A",
-    width: 100,
+    width: 130,
   },
   optionText: {
+    paddingBottom: 10,
     lineHeight: 45,
     textAlign: "center",
     fontFamily: "Telugu1",
-    fontSize: 18,
-    color: "#fff",
+    fontSize: 24,
+    color: "#000",
   },
   meaningCard: {
     marginTop: 35,
@@ -92,6 +112,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   meaningText: {
+    paddingTop: 5,
     lineHeight: 50,
     fontSize: 35,
     fontFamily: "Telugu1",
