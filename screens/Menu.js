@@ -8,7 +8,7 @@ const Menu = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }}>
       <SlokaCards navigation={navigation} />
-      {/*<Footer />*/}
+      <Footer />
     </View>
   );
 };

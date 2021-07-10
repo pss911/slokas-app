@@ -7,7 +7,7 @@ const Sloka = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }}>
       <SlokaContainer id={navigation.getParam("id")} />
-      {/*<Footer />*/}
+      <Footer />
     </View>
   );
 };

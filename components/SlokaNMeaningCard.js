@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import Colors from "../assets/Colors.json"
 
 const SlokaNMeaningCard = ({
   sloka,
@@ -64,7 +65,7 @@ const SlokaNMeaningCard = ({
 const styles = StyleSheet.create({
   slokaCard: {
     borderRadius: 10,
-    backgroundColor: "#FCCE89",
+    backgroundColor: Colors.light,
     paddingTop: 30,
   },
   slokaText: {
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
     fontSize: 19,
     fontFamily: "Telugu1",
     textAlign: "center",
-    color: "#C31A1A",
+    color: Colors.dark,
     paddingHorizontal: 15,
     paddingBottom: 35,
   },
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginHorizontal: 5,
     height: 45,
-    backgroundColor: "#C31A1A",
+    backgroundColor: Colors.darkAccent,
     width: 130,
   },
   optionText: {
@@ -101,13 +102,13 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontFamily: "Telugu1",
     fontSize: 20,
-    color: "#fff",
+    color: Colors.buttonForeGround,
   },
-  activeOption: { color: "#fff200", textDecorationLine: "underline" },
+  activeOption: { color: Colors.active, textDecorationLine: "underline" },
   meaningCard: {
     marginTop: 35,
     marginBottom: 10,
-    backgroundColor: "#FCCE89",
+    backgroundColor: Colors.light,
     padding: 15,
     borderRadius: 10,
   },
@@ -117,7 +118,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: "Telugu1",
     textAlign: "center",
-    color: "#C31A1A",
+    color: Colors.dark,
   },
 });
 

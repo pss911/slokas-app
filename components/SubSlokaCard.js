@@ -6,6 +6,7 @@ import {
   FlatList,
   TouchableOpacity,
 } from "react-native";
+import Colors from "../assets/Colors.json"
 
 const SubSlokaCard = ({ id, navigation }) => {
   const [data, setData] = useState();
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
   subSlokaConatiner: {
     width: "100%",
     borderRadius: 10,
-    backgroundColor: "#FCCE89",
+    backgroundColor: Colors.light,
     flex: 1,
     justifyContent: "center",
     marginTop: 10,
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
   },
   slokaNameText: {
     fontSize: 36,
-    color: "#890707",
+    color: Colors.dark,
     fontFamily: "Telugu1",
   },
 });

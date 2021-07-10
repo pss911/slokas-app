@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Linking } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
+import Colors from "../assets/Colors.json"
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
                 name="twitter"
                 onPress={() => Linking.openURL("http://twitter.com")}
                 size={22}
-                color="white"
+                color={Colors.buttonForeGround}
               />
             </View>
             <View style={styles.socialMedia}>
@@ -23,7 +24,7 @@ const Footer = () => {
                 name="facebook-square"
                 onPress={() => Linking.openURL("http://facebook.com")}
                 size={22}
-                color="white"
+                color={Colors.buttonForeGround}
               />
             </View>
             <View style={styles.socialMedia}>
@@ -31,7 +32,7 @@ const Footer = () => {
                 name="youtube"
                 onPress={() => Linking.openURL("http://youtube.com")}
                 size={22}
-                color="white"
+                color={Colors.buttonForeGround}
               />
             </View>
             <View style={styles.socialMedia}>
@@ -39,7 +40,7 @@ const Footer = () => {
                 name="patreon"
                 onPress={() => Linking.openURL("http://patreon.com")}
                 size={22}
-                color="white"
+                color={Colors.buttonForeGround}
               />
             </View>
           </View>
@@ -57,18 +58,18 @@ const Footer = () => {
 const styles = StyleSheet.create({
   footer: {
     height: 110,
-    backgroundColor: "#EE7D41",
+    backgroundColor: Colors.light,
   },
   imageContainer: {
     width: 55,
     height: 55,
-    backgroundColor: "#890707",
+    backgroundColor: Colors.dark,
     borderRadius: 10,
   },
   socialMedia: {
     width: 40,
     height: 40,
-    backgroundColor: "#890707",
+    backgroundColor: Colors.dark,
     borderRadius: 10,
     marginLeft: 5,
     display: "flex",
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
   copyRightText: {
     textAlign: "center",
     fontSize: 16,
-    color: "#890707",
+    color: Colors.dark,
     fontFamily: "Telugu1",
   },
 });

@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
+import Colors from "../assets/Colors.json"
 
 const SlokaCard = ({ image, title }) => {
   return (
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     width: "100%",
     marginVertical: 10,
-    backgroundColor: "#FCCE89",
+    backgroundColor: Colors.light,
     height: 100,
     borderRadius: 10,
     display: "flex",
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     height: 80,
     width: 80,
-    backgroundColor: "#DE5C17",
+    backgroundColor: Colors.darkAccent,
     borderRadius: 10,
     marginHorizontal: 10,
   },
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
   },
-  title: { fontFamily: "Telugu1", fontSize: 36, color: "#890707" },
+  title: { fontFamily: "Telugu1", fontSize: 36, color: Colors.dark },
 });
 
 export default SlokaCard;

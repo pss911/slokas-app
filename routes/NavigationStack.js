@@ -1,6 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
+import Colors from "../assets/Colors.json"
 
 import Menu from "../screens/Menu";
 import SubMenu from "../screens/SubMenu";
@@ -13,12 +14,11 @@ const screens = {
       title: "శ్లోకములు",
       headerBackTitle: "Back",
       headerStyle: {
-        backgroundColor: "#FCCE89",
+        backgroundColor: Colors.light,
         height: 115,
       },
-      headerTintColor: "#C31A1A",
+      headerTintColor: Colors.dark,
       headerTitleStyle: {
-        fontWeight: "900",
         letterSpacing: 1,
         fontFamily: "Telugu1",
         fontSize: 36,
@@ -31,12 +31,11 @@ const screens = {
       title: "శ్లోకములు",
       headerBackTitle: "Back",
       headerStyle: {
-        backgroundColor: "#FCCE89",
+        backgroundColor: Colors.light,
         height: 115,
       },
-      headerTintColor: "#C31A1A",
+      headerTintColor: Colors.dark,
       headerTitleStyle: {
-        fontWeight: "900",
         letterSpacing: 1,
         fontFamily: "Telugu1",
         fontSize: 36,
@@ -49,12 +48,11 @@ const screens = {
       title: "శ్లోకములు",
       headerBackTitle: "Back",
       headerStyle: {
-        backgroundColor: "#FCCE89",
+        backgroundColor: Colors.light,
         height: 115,
       },
-      headerTintColor: "#C31A1A",
+      headerTintColor: Colors.dark,
       headerTitleStyle: {
-        fontWeight: "900",
         letterSpacing: 1,
         fontFamily: "Telugu1",
         fontSize: 36,
