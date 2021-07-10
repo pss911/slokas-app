@@ -13,35 +13,38 @@ const SlokaCards = ({ id }) => {
   return (
     <>
       {data ? (
-        <ScrollView style={styles.container}>
-          <Navigation
-            leftClick={() => {
-              if (index > 0) {
-                setIndex(index - 1);
-                setMeaningType(undefined);
-              } else {
-                null;
-              }
-            }}
-            rightClick={() => {
-              if (index < data.length - 1) {
-                setIndex(index + 1);
-                setMeaningType(undefined);
-              } else {
-                null;
-              }
-            }}
+          <>
+            <Navigation
+              id={data[index].id}
+              leftClick={() => {
+                if (index > 0) {
+                  setIndex(index - 1);
+                  setMeaningType(undefined);
+                } else {
+                  null;
+                }
+              }}
+              rightClick={() => {
+                if (index < data.length - 1) {
+                  setIndex(index + 1);
+                  setMeaningType(undefined);
+                } else {
+                  null;
+                }
+              }}
           />
-          <ScrollView>
-            <SlokaNMeaningCard
-              sloka={data[index].sloka}
-              meaningType={meaningType}
-              setMeaningType={setMeaningType}
-              wordToWordMeaning={data[index].wordByWordMeaning}
-              meaning={data[index].meaning}
-            />
-          </ScrollView>
-        </ScrollView>
+            <ScrollView style={styles.container}>
+              <ScrollView>
+                <SlokaNMeaningCard
+                    sloka={data[index].sloka}
+                    meaningType={meaningType}
+                    setMeaningType={setMeaningType}
+                    wordToWordMeaning={data[index].wordByWordMeaning}
+                    meaning={data[index].meaning}
+                />
+              </ScrollView>
+            </ScrollView>
+          </>
       ) : (
         <ScrollView></ScrollView>
       )}

@@ -1,21 +1,23 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import {View, StyleSheet, TouchableOpacity, Text} from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
-const Navigation = ({ leftClick, rightClick }) => {
-  return (
-    <View style={styles.navConatiner}>
-      <TouchableOpacity activeOpacity={0.7} onPress={leftClick}>
-        <View style={styles.buttons}>
-          <AntDesign name="arrowleft" size={28} color="white" />
+const Navigation = ({ leftClick, rightClick, id }) => {
+  return (<View style={{marginHorizontal: 10}}>
+        <View style={styles.navConatiner}>
+          <TouchableOpacity activeOpacity={0.7} onPress={leftClick}>
+            <View style={styles.buttons}>
+              <AntDesign name="arrowleft" size={28} color="white" />
+            </View>
+          </TouchableOpacity>
+          <Text style={styles.id}>{id}</Text>
+          <TouchableOpacity activeOpacity={0.7} onPress={rightClick}>
+            <View style={styles.buttons}>
+              <AntDesign name="arrowright" size={28} color="white" />
+            </View>
+          </TouchableOpacity>
         </View>
-      </TouchableOpacity>
-      <TouchableOpacity activeOpacity={0.7} onPress={rightClick}>
-        <View style={styles.buttons}>
-          <AntDesign name="arrowright" size={28} color="white" />
-        </View>
-      </TouchableOpacity>
-    </View>
+      </View>
   );
 };
 
@@ -41,6 +43,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  id: {
+    fontFamily: "Telugu1",
+    fontSize: 20,
+    color: "#C31A1A"
+  }
 });
 
 export default Navigation;
