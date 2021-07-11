@@ -8,7 +8,7 @@ const SubMenu = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }}>
       <SubSlokaCards id={navigation.getParam("id")} navigation={navigation} />
-      <Footer />
+      {/* <Footer /> */}
     </View>
   );
 };
