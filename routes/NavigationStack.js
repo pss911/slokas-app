@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
-import Colors from "../assets/Colors.json"
+import Colors from "../assets/Colors.json";
 
 import Menu from "../screens/Menu";
 import SubMenu from "../screens/SubMenu";

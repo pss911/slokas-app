@@ -6,13 +6,13 @@ import {
   FlatList,
   TouchableOpacity,
 } from "react-native";
-import Colors from "../assets/Colors.json"
+import Colors from "../assets/Colors.json";
 
 const SubSlokaCard = ({ id, navigation }) => {
   const [data, setData] = useState();
   useEffect(() => {
     import("../assets/data/divisions/").then((res) => setData(res.default[id]));
-  }, []);
+  }, [id]);
   return (
     <>
       {data ? (

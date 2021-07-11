@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Linking } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
-import Colors from "../assets/Colors.json"
+import Colors from "../assets/Colors.json";
 
 const Footer = () => {
   return (

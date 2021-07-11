@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
-import Colors from "../assets/Colors.json"
+import Colors from "../assets/Colors.json";
 
 const SlokaCard = ({ image, title }) => {
   return (
@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
   image: {
     height: "100%",
     width: "100%",
+    borderRadius: 10,
   },
   cardContainer: {
     width: "100%",

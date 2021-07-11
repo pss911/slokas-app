@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import Colors from "../assets/Colors.json"
+import Colors from "../assets/Colors.json";
 
 const SlokaNMeaningCard = ({
   sloka,
