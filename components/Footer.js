@@ -1,15 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet, Linking } from "react-native";
+import { Image, View, Text, StyleSheet, Linking } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import Colors from "../assets/Colors.json";
+import logo from '../assets/icon.png'
 
 const Footer = () => {
   return (
     <View>
       <View style={styles.footer}>
         <View style={styles.innerContainer}>
-          <View style={styles.imageContainer}>{null}</View>
+          <View style={styles.imageContainer}>
+            <Image source={logo} style={{ width: 55, height: 55 }} /> 
+          </View>
           <View style={styles.socialMediaContainer}>
             <View style={styles.socialMedia}>
               <AntDesign
@@ -65,7 +68,10 @@ const styles = StyleSheet.create({
     height: 55,
     backgroundColor: Colors.dark,
     borderRadius: 10,
+    overflow: 'hidden'
   },
+
+
   socialMedia: {
     width: 40,
     height: 40,
