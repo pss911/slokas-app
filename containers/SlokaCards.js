@@ -24,7 +24,11 @@ const renderItem = (books, navigation) => {
   return (
     <TouchableOpacity
       activeOpacity={0.7}
-      onPress={() => navigation.navigate("SubMenu", { id: books.item.id })}
+      onPress={() =>
+        books.item.hasDivisions
+          ? navigation.navigate("SubMenu", { id: books.item.id })
+          : navigation.navigate("Sloka", { id: books.item.id })
+      }
     >
       <SlokaCard
         title={books.item.name}
