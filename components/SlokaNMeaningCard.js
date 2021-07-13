@@ -28,26 +28,28 @@ const SlokaNMeaningCard = ({
                     : styles.optionText
                 }
               >
-                తాత్పర్యము
+                భావము
               </Text>
             </TouchableOpacity>
           </View>
-          <View style={styles.option}>
-            <TouchableOpacity
-              activeOpacity={0.7}
-              onPress={() => setMeaningType(false)}
-            >
-              <Text
-                style={
-                  meaningType == false
-                    ? [styles.optionText, styles.activeOption]
-                    : styles.optionText
-                }
+          {wordToWordMeaning ? (
+            <View style={styles.option}>
+              <TouchableOpacity
+                activeOpacity={0.7}
+                onPress={() => setMeaningType(false)}
               >
-                ప్రతి పదార్ధము
-              </Text>
-            </TouchableOpacity>
-          </View>
+                <Text
+                  style={
+                    meaningType == false
+                      ? [styles.optionText, styles.activeOption]
+                      : styles.optionText
+                  }
+                >
+                  ప్రతి పదార్ధము
+                </Text>
+              </TouchableOpacity>
+            </View>
+          ) : null}
         </View>
       </View>
       {
