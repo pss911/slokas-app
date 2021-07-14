@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import Colors from "../assets/Colors.json";
 
-const Navigation = ({ leftClick, rightClick, id }) => {
+const Navigation = ({ leftClick, rightClick, id, setVisible }) => {
   return (
     <View style={{ marginHorizontal: 10 }}>
       <View style={styles.navConatiner}>
@@ -17,6 +17,12 @@ const Navigation = ({ leftClick, rightClick, id }) => {
           </View>
         </TouchableOpacity>
         <Text style={styles.id}>{id}</Text>
+        <TouchableOpacity
+          onPress={() => setVisible(true)}
+          style={{ padding: 10 }}
+        >
+          <AntDesign name="search1" size={24} color={Colors.dark} />
+        </TouchableOpacity>
         <TouchableOpacity activeOpacity={0.7} onPress={rightClick}>
           <View style={styles.buttons}>
             <AntDesign

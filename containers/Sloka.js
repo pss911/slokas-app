@@ -3,18 +3,18 @@ import { StyleSheet, ScrollView } from "react-native";
 import Navigation from "../components/Navigation";
 import SlokaNMeaningCard from "../components/SlokaNMeaningCard";
 
-const SlokaCards = ({ id }) => {
-  const [data, setData] = useState();
-  useEffect(() => {
-    import("../assets/data/slokas/").then((res) => setData(res.default[id]));
-  }, [id]);
+const SlokaCards = ({ id, setVisible, data, nextIndex }) => {
   const [index, setIndex] = useState(0);
   const [meaningType, setMeaningType] = useState();
+  useEffect(() => {
+    setIndex(nextIndex);
+  }, [nextIndex]);
   return (
     <>
       {data ? (
         <>
           <Navigation
+            setVisible={setVisible}
             id={data[index].id}
             leftClick={() => {
               if (index > 0) {
