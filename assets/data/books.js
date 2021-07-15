@@ -1,4 +1,4 @@
-﻿export default [
+﻿﻿export default [
   {
     id: "b001",
     name: "శ్రీకృష్ణ కర్ణామృతం",
@@ -20,7 +20,19 @@
   {
     id: "b004",
     name: "మూక పంచశతి",
-    image: require("../images/MukaPanchasathi.jpg"),
+    image: require("../images/Mukapanchasathi.jpg"),
+    hasDivisions: true,
+  },
+  {
+    id: "b005",
+    name: "ఆర్యా ద్విశతి",
+    image: require("../images/Aryadvisathi.jpg"),
+    hasDivisions: false,
+  },
+  {
+    id: "b006",
+    name: "నారాయణీయము",
+    image: require("../images/Narayaneeyamu.jpg"),
     hasDivisions: true,
   },
 ];
