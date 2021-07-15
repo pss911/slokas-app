@@ -2,7 +2,7 @@
   "expo": {
     "name": "Bhakti Lahari",
     "slug": "Bhakti-Lahari",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "default",
     "icon": "./assets/icon.png",
     "splash": {
@@ -22,7 +22,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.abhiramsreeramexpo.bhaktilahari"
+      "package": "com.abhiramsreeramexpo.bhaktilahari",
+      "permissions": []
     },
     "web": {
       "favicon": "./assets/favicon.png"
