@@ -3,7 +3,7 @@ import { Image, View, Text, StyleSheet, Linking } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import Colors from "../assets/Colors.json";
-import logo from '../assets/icon.png'
+import logo from "../assets/icon.png";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
       <View style={styles.footer}>
         <View style={styles.innerContainer}>
           <View style={styles.imageContainer}>
-            <Image source={logo} style={{ width: 55, height: 55 }} /> 
+            <Image source={logo} style={{ width: 55, height: 55 }} />
           </View>
           <View style={styles.socialMediaContainer}>
             <View style={styles.socialMedia}>
@@ -50,7 +50,7 @@ const Footer = () => {
         </View>
         <View>
           <Text style={styles.copyRightText}>
-            Slokas App © 2021. All Rights Reserved.
+            Bhakti Lahari © 2021. All Rights Reserved.
           </Text>
         </View>
       </View>
@@ -68,9 +68,8 @@ const styles = StyleSheet.create({
     height: 55,
     backgroundColor: Colors.dark,
     borderRadius: 10,
-    overflow: 'hidden'
+    overflow: "hidden",
   },
-
 
   socialMedia: {
     width: 40,

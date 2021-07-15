@@ -11,7 +11,7 @@ const screens = {
   Menu: {
     screen: Menu,
     navigationOptions: {
-      title: "శ్లోకములు",
+      title: "భక్తి లహరి",
       headerBackTitle: "Back",
       headerStyle: {
         backgroundColor: Colors.light,
@@ -28,7 +28,7 @@ const screens = {
   SubMenu: {
     screen: SubMenu,
     navigationOptions: {
-      title: "శ్లోకములు",
+      title: "భక్తి లహరి",
       headerBackTitle: "Back",
       headerStyle: {
         backgroundColor: Colors.light,
@@ -45,7 +45,7 @@ const screens = {
   Sloka: {
     screen: Sloka,
     navigationOptions: {
-      title: "శ్లోకములు",
+      title: "భక్తి లహరి",
       headerBackTitle: "Back",
       headerStyle: {
         backgroundColor: Colors.light,
