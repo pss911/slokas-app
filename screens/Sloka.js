@@ -57,35 +57,37 @@ const Sloka = ({ navigation }) => {
 
   return (
     <View style={{ flex: 1 }}>
-      <ModalPopup visible={visible}>
-        <Text style={{ fontFamily: "Telugu2", fontSize: 15 }}>
-          Enter a Sloka #:
-        </Text>
-        <TextInput
-          autoFocus={true}
-          onChangeText={setText}
-          value={text}
-          keyboardType="numeric"
-          style={
-            error ? [styles.textInput, { marginBottom: 2 }] : styles.textInput
-          }
-        />
-        {error ? <Text style={styles.error}>{error}</Text> : null}
-        <View
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-        >
-          <TouchableOpacity onPress={handleClose} style={styles.button}>
-            <Text style={styles.buttonText}>Close</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={handleSubmit} style={styles.button}>
-            <Text style={styles.buttonText}>Submit</Text>
-          </TouchableOpacity>
-        </View>
-      </ModalPopup>
+      {data ? (
+        <ModalPopup visible={visible}>
+          <Text style={{ fontFamily: "Telugu2", fontSize: 15 }}>
+            Enter a Sloka # {`(1 to ${data.length})`}
+          </Text>
+          <TextInput
+            autoFocus={true}
+            onChangeText={setText}
+            value={text}
+            keyboardType="numeric"
+            style={
+              error ? [styles.textInput, { marginBottom: 2 }] : styles.textInput
+            }
+          />
+          {error ? <Text style={styles.error}>{error}</Text> : null}
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+            }}
+          >
+            <TouchableOpacity onPress={handleClose} style={styles.button}>
+              <Text style={styles.buttonText}>Close</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={handleSubmit} style={styles.button}>
+              <Text style={styles.buttonText}>Submit</Text>
+            </TouchableOpacity>
+          </View>
+        </ModalPopup>
+      ) : null}
       <SlokaContainer
         setVisible={setVisible}
         id={navigation.getParam("id")}
