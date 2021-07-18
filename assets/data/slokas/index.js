@@ -16,8 +16,8 @@ export default {
   b006d004: require("./b006d004").default,
   b006d005: require("./b006d005").default,
   b006d006: require("./b006d006").default,
-  // b006d007: require("./b006d007").default,
-  // b006d008: require("./b006d008").default,
-  // b006d009: require("./b006d009").default,
-  // b006d010: require("./b006d010").default,
+  b006d007: require("./b006d007").default,
+  b006d008: require("./b006d008").default,
+  b006d009: require("./b006d009").default,
+  b006d010: require("./b006d010").default,
 };
