@@ -27,7 +27,7 @@
     id: "b005",
     name: "ఆర్యా ద్విశతి",
     image: require("../images/Aryadvisathi.jpg"),
-    hasDivisions: true,
+    hasDivisions: false,
   },
   {
     id: "b006",
