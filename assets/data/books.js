@@ -17,28 +17,4 @@
     image: require("../images/Sivanandalahari.jpg"),
     hasDivisions: false,
   },
-  {
-    id: "b004",
-    name: "మూక పంచశతి",
-    image: require("../images/Mukapanchasathi.jpg"),
-    hasDivisions: true,
-  },
-  {
-    id: "b005",
-    name: "ఆర్యా ద్విశతి",
-    image: require("../images/Aryadvisathi.jpg"),
-    hasDivisions: false,
-  },
-  {
-    id: "b006",
-    name: "నారాయణీయము",
-    image: require("../images/Narayaneeyamu.jpg"),
-    hasDivisions: true,
-  },
-  {
-    id: "b007",
-    name: "ముకుందమాల",
-    image: require("../images/Mukundamala.jpg"),
-    hasDivisions: false,
-  },
 ];
