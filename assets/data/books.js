@@ -17,4 +17,10 @@
     image: require("../images/Sivanandalahari.jpg"),
     hasDivisions: false,
   },
+  {
+    id: "b004",
+    name: "మూక  పంచశతి ",
+    image: require("../images/Mukapanchasathi.jpg"),
+    hasDivisions: true,
+  },
 ];
